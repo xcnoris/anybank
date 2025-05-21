@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,9 +8,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form-nova-transacao.component.css'
 })
 export class FormNovaTransacaoComponent {
-  valorTransacao = "10";
+  tipoTransacao = "";
+  valorTransacao = "";
+
+  trasacaocriada = output();
 
   aoSubimeter(){
-    console.log(this.valorTransacao)
+    this.trasacaocriada.emit();
   }
 }

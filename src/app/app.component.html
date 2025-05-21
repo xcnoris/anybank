@@ -1,6 +1,7 @@
 <div class="app">
   <div class="banner-form-wrapper">
     <app-banner />
-    <app-form-nova-transacao (trasacaocriada)="processarTransacao()"/>
+    <!-- Inserimos o $event para passar o valor que foi gerado pelo event. Por padrao é void -->
+    <app-form-nova-transacao (trasacaocriada)="processarTransacao($event)"/>
   </div>
 </div>
